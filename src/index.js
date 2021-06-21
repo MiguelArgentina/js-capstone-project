@@ -11,6 +11,7 @@ import CreditsScene from './Scenes/CreditsScene';
 import SceneMainMenu from './Scenes/SceneMainMenu';
 import SceneMain from './Scenes/SceneMain';
 import SceneGameOver from './Scenes/SceneGameOver';
+import SceneScoreBoard from './Scenes/SceneScoreBoard';
 
 import Model from './Model';
 class Game extends Phaser.Game {
@@ -28,6 +29,7 @@ class Game extends Phaser.Game {
     this.scene.add('SceneMainMenu', SceneMainMenu);
     this.scene.add('SceneMain', SceneMain);
     this.scene.add('SceneGameOver', SceneGameOver);
+    this.scene.add('SceneScoreBoard', SceneScoreBoard);
 
     //this.scene.start('SceneMainMenu');
 

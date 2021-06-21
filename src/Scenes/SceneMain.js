@@ -163,6 +163,14 @@ export default class SceneMain extends Phaser.Scene {
       collideWorldBounds: true
     });
 
+
+const enemiesCrashed = (player, enemy) => {
+  enemy.disableBody(true, true);
+  console.log('Game Over')
+  this.scene.start("SceneGameOver", { score: score });
+
+}
+
     enemies1.setVelocityY(5, 20);
     enemies1.setVelocityX(5, 15);
     this.physics.add.overlap(this.player, enemies1, enemiesCrashed, null, this);
@@ -220,8 +228,3 @@ export default class SceneMain extends Phaser.Scene {
 let score = 0;
 let scoreText;
 
-
-const enemiesCrashed = (player, enemy) => {
-  enemy.disableBody(true, true);
-  console.log('Game Over')
-}
