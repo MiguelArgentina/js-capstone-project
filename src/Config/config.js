@@ -3,6 +3,9 @@ import 'phaser';
 export default {
   width: 800,
   height: 600,
+  dom: {
+        createContainer: true
+    },
   backgroundColor: "black",
   parent: 'phaser',
   type: Phaser.WEBGL,
@@ -14,11 +17,6 @@ export default {
       gravity: { x: 0, y: 0 }
     }
   },
-  scene: [
-    // SceneMainMenu,
-    // SceneMain,
-    // SceneGameOver
-  ],
   pixelArt: true,
   roundPixels: true
 };
