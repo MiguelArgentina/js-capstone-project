@@ -8,6 +8,7 @@ module.exports = merge(base, {
   output: {
     filename: "bundle.min.js",
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[hash][ext][query]'
   },
   devtool: false,
   performance: {
