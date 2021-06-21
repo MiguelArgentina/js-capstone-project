@@ -81,6 +81,11 @@ export default class SceneMain extends Phaser.Scene {
       collideWorldBounds: true
     });
 
+
+
+  
+
+
     this.golds.setVelocityY(10, 40);
     this.golds.setVelocityX(5, 15);
 
@@ -155,7 +160,7 @@ export default class SceneMain extends Phaser.Scene {
       repeat: 4,
       setXY: {
         x: 40,
-        y: 30,
+        y: 40,
         stepX: 150
       },
       bounceY: 1,
@@ -181,7 +186,7 @@ const enemiesCrashed = (player, enemy) => {
         x: 0.5,
         y: 0.5
       },
-      repeat: 3,
+      repeat: 4,
       setXY: {
         x: 100,
         y: 30,
@@ -196,7 +201,20 @@ const enemiesCrashed = (player, enemy) => {
     enemies2.setVelocityX(-5, -15);
     this.physics.add.overlap(this.player, enemies2, enemiesCrashed, null, this);
 
-
+  
+    for (let i = 0 ; i < this.golds.children['entries'].length; i++) {
+      let velX = 0
+      if (i % 2 != 0){
+        this.silvers.children['entries'][i].setVelocityX(-5, -15);
+        this.golds.children['entries'][i].setVelocityX(-5, -15);
+        if (i < 4 ) {
+          enemies1.children['entries'][i].setVelocityX(-7, -20);
+          enemies2.children['entries'][i].setVelocityX(-4, -17);
+        }
+      }
+      
+    console.log(this.golds.children['entries'][i]);
+  }
 
   }
 
