@@ -1,10 +1,10 @@
 import Phaser from 'phaser';
 import Player from '../player';
-import thingsGold from '../../src/assets/visual/things_gold.png';
-import thingsSilver from '../../src/assets/visual/things_silver.png';
-import enemyRed1 from '../../src/assets/visual/enemyRed1.png';
-import enemyRed3 from '../../src/assets/visual/enemyRed3.png';
-import sprPlayer from '../../src/assets/visual/sprPlayer.png';
+import thingsGold from '../assets/visual/things_gold.png';
+import thingsSilver from '../assets/visual/things_silver.png';
+import enemyRed1 from '../assets/visual/enemyRed1.png';
+import enemyRed3 from '../assets/visual/enemyRed3.png';
+import sprPlayer from '../assets/visual/sprPlayer.png';
 
 let score = 0;
 let scoreText;
