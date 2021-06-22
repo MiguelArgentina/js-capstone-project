@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-Visit [Tucu Space Shooter](#)
+Visit [Tucu Space Shooter](https://jovial-aryabhata-576249.netlify.app/)
 
 ## Prerequisites
 
