@@ -56,6 +56,11 @@ export default class SceneMain extends Phaser.Scene {
       fill: '#ff0'
     });
 
+    boostText = this.add.text(460, 16, '', {
+      fontSize: '22px',
+      fill: '#ff0000',
+    });
+
 
     this.player = new Player(
       this,
@@ -94,9 +99,9 @@ export default class SceneMain extends Phaser.Scene {
       gold.disableBody(true, true);
       score += 10;
       scoreText.setText('Score: ' + score);
-      console.log('Score: ', score)
+     
       if (this.golds.countActive(true) === 0) {
-        console.log('no more silvers')
+      
         this.golds.children.iterate(function (child) {
 
           child.enableBody(true, Phaser.Math.Between(100, 800), Phaser.Math.Between(100, 600), true, true);
@@ -133,9 +138,9 @@ export default class SceneMain extends Phaser.Scene {
       silver.disableBody(true, true);
       score += 5;
       scoreText.setText('Score: ' + score);
-      console.log('Score: ', score)
+      
       if (this.silvers.countActive(true) === 0) {
-        console.log('no more silvers')
+        
         this.silvers.children.iterate(function (child) {
 
           child.enableBody(true, Phaser.Math.Between(100, 800), Phaser.Math.Between(100, 600), true, true);
@@ -171,7 +176,7 @@ export default class SceneMain extends Phaser.Scene {
 
 const enemiesCrashed = (player, enemy) => {
   enemy.disableBody(true, true);
-  console.log('Game Over')
+ 
   this.scene.start("SceneGameOver", { score: score });
 
 }
@@ -213,7 +218,7 @@ const enemiesCrashed = (player, enemy) => {
         }
       }
       
-    console.log(this.golds.children['entries'][i]);
+   
   }
 
   }
@@ -249,4 +254,5 @@ const enemiesCrashed = (player, enemy) => {
 
 let score = 0;
 let scoreText;
+let boostText;
 
