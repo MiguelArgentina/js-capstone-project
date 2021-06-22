@@ -3,6 +3,7 @@ import Player from '../player';
 
 let score = 0;
 let scoreText;
+let boostText;
 
 export default class SceneMain extends Phaser.Scene {
   constructor() {
@@ -20,6 +21,7 @@ export default class SceneMain extends Phaser.Scene {
       frameHeight: 16,
     });
 
+    this.boost = 0;
     this.anims.create({
       key: 'sprPlayer',
       frames: this.anims.generateFrameNumbers('sprPlayer', {
@@ -35,6 +37,11 @@ export default class SceneMain extends Phaser.Scene {
     scoreText = this.add.text(660, 16, 'Score: 0', {
       fontSize: '20px',
       fill: '#ff0',
+    });
+
+    boostText = this.add.text(460, 16, '', {
+      fontSize: '22px',
+      fill: '#ff0000',
     });
 
     this.player = new Player(
@@ -179,14 +186,23 @@ export default class SceneMain extends Phaser.Scene {
     this.cursors = this.input.keyboard.createCursorKeys();
 
     if (this.cursors.up.isDown) {
-      this.player.moveUp();
+      if (this.cursors.up.shiftKey) {
+        boostText.setText('Booossttt!!');
+        this.player.moveUp(true);
+      } else {
+        this.player.moveUp();
+        boostText.setText('');
+      }
     } else if (this.cursors.down.isDown) {
+      boostText.setText('');
       this.player.moveDown();
     }
 
     if (this.cursors.left.isDown) {
+      boostText.setText('');
       this.player.moveLeft();
     } else if (this.cursors.right.isDown) {
+      boostText.setText('');
       this.player.moveRight();
     }
   }

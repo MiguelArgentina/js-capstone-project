@@ -8,8 +8,8 @@ export default class Player extends Entity {
     this.setScale(2);
   }
 
-  moveUp() {
-    this.body.velocity.y = -this.getData('speed');
+  moveUp(boost = false) {
+    this.body.velocity.y = boost ? -2 * this.getData('speed') : -this.getData('speed');
   }
 
   moveDown() {

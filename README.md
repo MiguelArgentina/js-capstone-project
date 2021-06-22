@@ -30,6 +30,7 @@ Visit [Tucu Space Shooter](https://jovial-aryabhata-576249.netlify.app/)
      - The difficulty resides in not crashing to the enemyes, who fly around all over the screen
      - When the player touches one of the enemies, the game is over
      - After the game is over, the player can store the score in the API for compiting agains all other players
+     - User can achieve boost speed pressing down Shift + Up key. This doubles the speed.
 
 ## Screenshots
 
