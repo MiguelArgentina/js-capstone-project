@@ -220,26 +220,30 @@ const enemiesCrashed = (player, enemy) => {
 
 
 
-  update() {
-
+   update() {
     this.player.update();
-
     this.cursors = this.input.keyboard.createCursorKeys();
 
     if (this.cursors.up.isDown) {
-      this.player.moveUp();
-
+      if (this.cursors.up.shiftKey) {
+        boostText.setText('Booossttt!!');
+        this.player.moveUp(true);
+      } else {
+        this.player.moveUp();
+        boostText.setText('');
+      }
     } else if (this.cursors.down.isDown) {
+      boostText.setText('');
       this.player.moveDown();
     }
 
     if (this.cursors.left.isDown) {
+      boostText.setText('');
       this.player.moveLeft();
     } else if (this.cursors.right.isDown) {
+      boostText.setText('');
       this.player.moveRight();
     }
-
-
   }
 }
 
