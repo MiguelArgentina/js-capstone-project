@@ -1,5 +1,10 @@
 import Phaser from 'phaser';
 import Player from '../player';
+import thingsGold from '../assets/visual/things_gold.png';
+import thingsSilver from '../assets/visual/things_silver.png';
+import enemyRed1 from '../assets/visual/enemyRed1.png';
+import enemyRed3 from '../assets/visual/enemyRed3.png';
+import sprPlayer from '../assets/visual/sprPlayer.png';
 
 let score = 0;
 let scoreText;
@@ -11,12 +16,12 @@ export default class SceneMain extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('things_gold', '../../src/assets/visual/things_gold.png');
-    this.load.image('things_silver', '../../src/assets/visual/things_silver.png');
-    this.load.image('enemyRed1', '../../src/assets/visual/enemyRed1.png');
-    this.load.image('enemyRed3', '../../src/assets/visual/enemyRed3.png');
+    this.load.image('things_gold', thingsGold);
+    this.load.image('things_silver', thingsSilver);
+    this.load.image('enemyRed1', enemyRed1);
+    this.load.image('enemyRed3', enemyRed3);
 
-    this.load.spritesheet('sprPlayer', '../../src/assets/visual/sprPlayer.png', {
+    this.load.spritesheet('sprPlayer', sprPlayer, {
       frameWidth: 16,
       frameHeight: 16,
     });
