@@ -17,7 +17,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(gif|png|mp3|jpe?g|svg|xml)$/i,
+        test: /\.(gif|png|mp3|html|jpe?g|svg|xml)$/i,
         use: 'file-loader',
       },
       {
