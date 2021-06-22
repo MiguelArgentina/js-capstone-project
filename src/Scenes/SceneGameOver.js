@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import config from '../Config/config';
 import Button from '../Objects/Button';
+import form from '../assets/form.html';
 import { gameApiRequest, createScore } from '../scoresApi';
 
 export default class SceneGameOver extends Phaser.Scene {
@@ -13,7 +14,7 @@ export default class SceneGameOver extends Phaser.Scene {
   }
 
   preload() {
-    this.load.html('form', '../../src/assets/form.html');
+    this.load.html('form', form);
   }
 
   create() {
