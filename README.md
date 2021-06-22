@@ -3,10 +3,6 @@
 
 # Javascript Capstone Project : Video game
 
-## Features
-
-- 
-
 ## Built With
 
 - HTML5
@@ -16,6 +12,33 @@
 ## Live Demo
 
 Visit [Tucu Space Shooter](https://jovial-aryabhata-576249.netlify.app/)
+
+## Game Design Document
+
+- The framework chosen for the game development is Phaser 3
+- The game UI will contain 8 screens.
+- We will have 2 screens for booting (main logo, preloading assets with a progress bar) up to the main title scene, where the user will get to the interactive menu.
+ - This menu will have 4 options:
+     - Play the game
+     - Options for sound and music
+     - Credits
+     - Scoreboard with the top ten scores
+- Scores are stored in an online server and accesed through an API
+- Game Logic:
+    - The game takes place in space, bounded by the screen size of the game, where all object rebound when colliding to the limits
+     - The objective is to collect as many gold ans silver pills as possible
+     - The difficulty resides in not crashing to the enemyes, who fly around all over the screen
+     - When the player touches one of the enemies, the game is over
+     - After the game is over, the player can store the score in the API for compiting agains all other players
+
+## Screenshots
+
+![screenshot 1](scr1.png)
+![screenshot 2](scr2.png)
+![screenshot 3](scr3.png)
+![screenshot 4](scr4.png)
+![screenshot 5](scr5.png)
+![screenshot 6](scr6.png)
 
 ## Prerequisites
 
@@ -61,7 +84,7 @@ After starting the development server with `npm start`, you can edit any files i
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
+Give a &nbsp;⭐️ &nbsp; if you like this project!
 
 ## Acknowledgments
 

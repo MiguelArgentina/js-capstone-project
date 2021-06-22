@@ -43,10 +43,11 @@ export default class SceneGameOver extends Phaser.Scene {
     this.returnKey.on('up', () => {
       const name = this.nameInput.getChildByName('name');
       if (name.value !== '') {
-        gameApiRequest(null, 'POST', createScore(name.value, this.score)).then(() => {
-          name.value = '';
-          this.nameInput.visible = false;
-        });
+        gameApiRequest(null, 'POST', createScore(name.value, this.score))
+          .then(() => {
+            name.value = '';
+            this.nameInput.visible = false;
+          });
       }
     });
 

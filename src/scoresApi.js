@@ -1,8 +1,11 @@
+import 'regenerator-runtime/runtime';
+
 const baseUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 
 const createGameUrl = `${baseUrl}games/`;
 const apiKey = 'v6Go85O4ifWJZhFDvUSn';
 const scoresDataUrl = `${createGameUrl + apiKey}/scores/`;
+const fetch = require('node-fetch');
 
 async function gameApiRequest(url, httpMethod, params) {
   if (url == null) {
