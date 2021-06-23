@@ -7,7 +7,7 @@ const apiKey = 'v6Go85O4ifWJZhFDvUSn';
 const scoresDataUrl = `${createGameUrl + apiKey}/scores/`;
 const fetch = require('node-fetch');
 
-async function gameApiRequest(url, httpMethod, params) {
+const gameApiRequest = async (url, httpMethod, params) => {
   if (url == null) {
     url = scoresDataUrl;
   }
@@ -29,7 +29,7 @@ async function gameApiRequest(url, httpMethod, params) {
   const response = await fetch(url, options);
   const json = await response.json();
   return json;
-}
+};
 
 const createScore = (playerName, playerScore) => {
   const params = {

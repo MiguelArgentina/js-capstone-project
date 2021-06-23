@@ -2,12 +2,14 @@
 
 
 # Javascript Capstone Project : Video game
-
+![screenshot 5](scr5.png)
 ## Built With
 
-- HTML5
-- CSS3
-- Javascript (ES6)
+- JavaScript ES6+
+- Phaser 3
+- Webpack
+- HTML5/CSS3
+- NPM
 
 ## Live Demo
 
@@ -15,22 +17,35 @@ Visit [Tucu Space Shooter](https://jovial-aryabhata-576249.netlify.app/)
 
 ## Game Design Document
 
-- The framework chosen for the game development is Phaser 3
-- The game UI will contain 8 screens.
-- We will have 2 screens for booting (main logo, preloading assets with a progress bar) up to the main title scene, where the user will get to the interactive menu.
- - This menu will have 4 options:
-     - Play the game
-     - Options for sound and music
-     - Credits
-     - Scoreboard with the top ten scores
-- Scores are stored in an online server and accesed through an API
-- Game Logic:
-    - The game takes place in space, bounded by the screen size of the game, where all object rebound when colliding to the limits
-     - The objective is to collect as many gold ans silver pills as possible
-     - The difficulty resides in not crashing to the enemyes, who fly around all over the screen
-     - When the player touches one of the enemies, the game is over
-     - After the game is over, the player can store the score in the API for compiting agains all other players
-     - User can achieve boost speed pressing down Shift + Up key. This doubles the speed.
+### Game Logic
+     The game takes place in space, bounded by the screen size of the game, where enemies and energy pills rebound when colliding to the limits. The objective is to collect as many gold ans silver energy pills as possible while not crashing with the enemyes, who fly around all over the screen
+
+### Character
+![screenshot 5](scrplayer.png)
+
+### Objects
+![screenshot 5](screnergypills.png)
+![screenshot 5](screnemy.png)
+
+### Location
+- The space
+
+### Mission
+- Collect gold and silver energy pills
+
+### Movements
+- Player can fly up, down, left and right using the keyboard.
+- Double Speed: pressing down Shift key gives a double boost up for scaping the enemies
+
+### Energy pills
+- After collecting all the pills, they re appear in the screen
+
+### Difficulty
+- Enemies are flying around trying to destroy your spaceship. Don´t let them do it!
+
+### Scores
+- Scores are optionally saved in an online server using an API
+- A top ten leaderboard is integrated to the game
 
 ## Screenshots
 
@@ -53,13 +68,15 @@ Visit [Tucu Space Shooter](https://jovial-aryabhata-576249.netlify.app/)
 - Run this command in your OS terminal: `git clone git@github.com:MiguelArgentina/js-capstone-project.git` to get a copy of the project.
 - Navigate to the project's directory using the `cd` command
 
-
 ## Using the game
 
-After cloning the repo, run `npm install` from your project directory. Then, you can start the local development server by running `npm start`.
+After cloning the repo, run `npm install` from your project directory to install all dependencies. Then, you can start the local development server by running `npm start`.
 
 After starting the development server with `npm start`, you can edit any files in the `src` folder and webpack will automatically recompile and reload your server (available at `http://localhost:8080` by default).
 
+## Testing
+
+A script for testing was added, so the user can simply run npm test from within the project's folder to execute all the tests.
 
 ## Author
 

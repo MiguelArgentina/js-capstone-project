@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
-import Player from '../player';
+import Player from '../Objects/player';
+import updateScore from '../assets/helpers/updateScore';
 
 let score = 0;
 let scoreText;
@@ -73,7 +74,7 @@ export default class SceneMain extends Phaser.Scene {
 
     const goldCollected = (player, gold) => {
       gold.disableBody(true, true);
-      score += 10;
+      score = updateScore('gold', score);
       scoreText.setText(`Score: ${score}`);
       if (this.golds.countActive(true) === 0) {
         this.golds.children.iterate((child) => {
@@ -107,7 +108,7 @@ export default class SceneMain extends Phaser.Scene {
 
     const silverCollected = (player, silver) => {
       silver.disableBody(true, true);
-      score += 5;
+      score = updateScore('silver', score);
       scoreText.setText(`Score: ${score}`);
       if (this.silvers.countActive(true) === 0) {
         this.silvers.children.iterate((child) => {

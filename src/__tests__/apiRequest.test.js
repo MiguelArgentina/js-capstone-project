@@ -1,5 +1,5 @@
 import 'regenerator-runtime/runtime';
-import { gameApiRequest } from '../scoresApi';
+import { gameApiRequest } from '../assets/helpers/scoresApi';
 
 it('requests the scores from the API', () => {
   gameApiRequest(null, 'GET', '')

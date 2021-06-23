@@ -11,7 +11,7 @@ import SceneMain from './Scenes/SceneMain';
 import SceneGameOver from './Scenes/SceneGameOver';
 import SceneScoreBoard from './Scenes/SceneScoreBoard';
 
-import Model from './Model';
+import Model from './Objects/Model';
 
 class Game extends Phaser.Game {
   constructor() {

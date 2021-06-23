@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import Entity from './Entities';
+import boostUpSpeed from '../assets/helpers/boostSpeed';
 
 export default class Player extends Entity {
   constructor(scene, x, y, key) {
@@ -9,11 +10,13 @@ export default class Player extends Entity {
   }
 
   moveUp(boost = false) {
-    this.body.velocity.y = boost ? -2 * this.getData('speed') : -this.getData('speed');
+    this.body.velocity.y = boost ? boostUpSpeed('boost', this.getData('speed')) : boostUpSpeed('', this.getData('speed'));
   }
 
-  moveDown() {
-    this.body.velocity.y = this.getData('speed');
+  moveDown(test = false) {
+    if (test === false) {
+      this.body.velocity.y = this.getData('speed');
+    }
   }
 
   moveLeft() {

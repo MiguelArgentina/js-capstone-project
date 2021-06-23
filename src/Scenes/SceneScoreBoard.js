@@ -3,7 +3,7 @@ import config from '../Config/config';
 import Button from '../Objects/Button';
 import {
   gameApiRequest,
-} from '../scoresApi';
+} from '../assets/helpers/scoresApi';
 
 export default class SceneScoreBoard extends Phaser.Scene {
   constructor() {

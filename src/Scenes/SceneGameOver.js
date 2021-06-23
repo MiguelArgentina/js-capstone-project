@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
 import config from '../Config/config';
 import Button from '../Objects/Button';
-import { gameApiRequest, createScore } from '../scoresApi';
+import { gameApiRequest, createScore } from '../assets/helpers/scoresApi';
 
 export default class SceneGameOver extends Phaser.Scene {
   constructor() {
